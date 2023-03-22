@@ -10,12 +10,7 @@ def get_pos(number):
     return f'{number}{pos_arr[3]}'
 
 def get_score (team, tournament):
-    counter = 0
-    for e in tournament:
-        counter += 1
-        if(team == e):
-            return f'{team} was the {get_pos(counter)}'
-
+    return f'{team} was the {get_pos(tournament.index(team)+1)}'
 
 print(get_score("Team Kenzie", hackathon_1))
 #Team Ateliware was winner!
